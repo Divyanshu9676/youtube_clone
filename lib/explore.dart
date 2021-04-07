@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_clone/explore.dart';
+import 'package:youtube_clone/main.dart';
 import 'package:youtube_clone/subscription.dart';
 import 'package:youtube_clone/library.dart';
 import 'package:youtube_clone/notification.dart';
 
-void main() => runApp(MaterialApp(
-  home: MyApp(),
-));
-
-class MyApp extends StatelessWidget {
+class Explore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +15,8 @@ class MyApp extends StatelessWidget {
               onPressed: () {},),
             IconButton(icon: Icon(Icons.notifications_none, color: Colors.black,),
               onPressed: () {},),
-        IconButton(icon: Icon(Icons.search, color: Colors.black,),
-          onPressed: () {},),
+            IconButton(icon: Icon(Icons.search, color: Colors.black,),
+              onPressed: () {},),
             IconButton(icon: Icon(Icons.account_circle_outlined, color: Colors.black,),
               onPressed: () {},),
           ],
@@ -29,9 +25,9 @@ class MyApp extends StatelessWidget {
         child: new Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            IconButton(icon: Icon(Icons.home), onPressed: () {},),
-            IconButton(icon: Icon(Icons.explore_outlined), onPressed: () {Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Explore()));},),
+            IconButton(icon: Icon(Icons.home_outlined), onPressed: () {Navigator.push(
+                context, MaterialPageRoute(builder: (context) => MyApp()));},),
+            IconButton(icon: Icon(Icons.explore), onPressed: () {},),
             IconButton(icon: Icon(Icons.subscriptions_outlined), onPressed: () {Navigator.push(
                 context, MaterialPageRoute(builder: (context) => Subscription()));},),
             IconButton(icon: Icon(Icons.notifications_none), onPressed: () {Navigator.push(
@@ -43,25 +39,25 @@ class MyApp extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-        children: <Widget>[
-          Card(
-            elevation: 10,
-            child: Image.asset("./assets/1.jpg"),
-          ),
-          Card(
-            elevation: 10,
-            child: Image.asset("./assets/2.jpg"),
-          ),
-          Card(
-            elevation: 10,
-            child: Image.asset("./assets/3.jpg"),
-          ),
-          Card(
-            elevation: 10,
-            child: Image.asset("./assets/4.jpg"),
-          ),
-        ],
-      ),),
+          children: <Widget>[
+            Card(
+              elevation: 10,
+              child: Image.asset("./assets/5.jpg"),
+            ),
+            Card(
+              elevation: 10,
+              child: Image.asset("./assets/6.jpg"),
+            ),
+            Card(
+              elevation: 10,
+              child: Image.asset("./assets/7.jpg"),
+            ),
+            Card(
+              elevation: 10,
+              child: Image.asset("./assets/8.jpg"),
+            ),
+          ],
+        ),),
     );
   }
 }
